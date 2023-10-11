@@ -41,5 +41,4 @@ fn verify_test() {
 }
 
 fn main(){
-    calculate_price_of_apples(9);
 }
