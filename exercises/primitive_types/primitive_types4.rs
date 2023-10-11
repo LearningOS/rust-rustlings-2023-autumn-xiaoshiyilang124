@@ -16,5 +16,4 @@ fn slice_out_of_array() {
 }
 
 fn main(){
-
 }
