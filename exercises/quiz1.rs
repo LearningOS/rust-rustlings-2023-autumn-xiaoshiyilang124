@@ -16,12 +16,12 @@
 
 // Put your function here!
 
-fn calculate_price_of_apples (a: i32) -> i32{
+fn calculate_price_of_apples (a: u32) -> u32{
     if a <= 40 {
         a * 2
     }
     else {
-        a * 1
+        a
     }
 }
 
