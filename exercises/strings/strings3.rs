@@ -7,17 +7,20 @@
 
 fn trim_me(input: &str) -> String {
     // TODO: Remove whitespace from both ends of a string!
-    ???
+    input.trim_start().trim_end().to_string()
 }
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There's multiple ways to do this!
-    ???
+    let mut input = input.to_string();
+    input.push_str(" world!");
+    input
 }
 
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
-    ???
+    input.replace("cars","balloons");
+    input.to_string()
 }
 
 #[cfg(test)]
@@ -42,4 +45,8 @@ mod tests {
         assert_eq!(replace_me("I think cars are cool"), "I think balloons are cool");
         assert_eq!(replace_me("I love to look at cars"), "I love to look at balloons");
     }
+}
+
+fn main(){
+
 }
