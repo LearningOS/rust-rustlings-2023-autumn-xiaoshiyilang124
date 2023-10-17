@@ -16,11 +16,8 @@ struct Package {
 
 impl Package {
     fn new(sender_country: String, recipient_country: String, weight_in_grams: u32) -> Package {
-        if weight_in_grams < 10 {
-            // This is not how you should handle errors in Rust,
-            // but we will learn about error handling later.
-            // haha, :>
-            panic!("Can not ship a package with weight below 10 grams.")
+        if weight_in_grams <= 0 {
+            panic!("Can not ship a weightless package.")
         } else {
             Package {
                 sender_country,
@@ -35,7 +32,7 @@ impl Package {
     }
 
     fn get_fees(&self, cents_per_gram: u32) -> u32 {
-        cents_per_gram * self.weight_in_grams
+        self.weight_in_grams * cents_per_gram
     }
 }
 

@@ -43,6 +43,7 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
+<<<<<<< HEAD
         // TODO: create a match expression to process the different message variants
         // Remember: When passing a tuple as a function argument, you'll need extra parentheses:
         // fn function((t, u, p, l, e))
@@ -53,6 +54,13 @@ impl State {
                 self.change_color((r, g, b));
             },
             Message::Echo(s) => {
+=======
+        match message{
+            Message::Move(p) =>{
+                self.move_position(p)
+            }
+            Message::Echo(s) =>{
+>>>>>>> d1567fe030a6dac432df15cb675bbc7da1f3e5c3
                 self.echo(s);
             },
             Message::Move(p) => {

@@ -8,7 +8,12 @@
 struct ColorClassicStruct {
     red: u32,
     green: u32,
+<<<<<<< HEAD
     blue: u32,
+=======
+    blue: u32
+    // TODO: Something goes here
+>>>>>>> d1567fe030a6dac432df15cb675bbc7da1f3e5c3
 }
 
 struct ColorTupleStruct(u32, u32, u32);
