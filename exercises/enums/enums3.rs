@@ -44,9 +44,11 @@ impl State {
 
     fn process(&mut self, message: Message) {
         match message{
-            Message::Move(p) =>{
-                self.move_position(p)
-            }
+            Message::ChangeColor(r, g, b) => {
+                // Don't need pass the paramater &mut self,
+                // that is passed by compiler automatically.
+                self.change_color((r, g, b));
+            },
             Message::Echo(s) =>{
                 self.echo(s);
             },
@@ -83,4 +85,8 @@ mod tests {
         assert_eq!(state.quit, true);
         assert_eq!(state.message, "Hello world!");
     }
+}
+
+fn main(){
+
 }
