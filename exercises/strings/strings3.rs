@@ -44,3 +44,7 @@ mod tests {
         assert_eq!(replace_me("I love to look at cars"), "I love to look at balloons");
     }
 }
+
+fn main(){
+    
+}
