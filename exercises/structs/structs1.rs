@@ -7,9 +7,9 @@
 
 
 struct ColorClassicStruct {
-    red: i32,
-    green: i32,
-    blue: i32
+    red: u32,
+    green: u32,
+    blue: u32
     // TODO: Something goes here
 }
 

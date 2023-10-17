@@ -44,7 +44,7 @@ impl State {
     fn process(&mut self, message: Message) {
         match message{
             Message::Move(p) =>{
-                self.move_position(p);
+                self.move_position(p)
             }
             Message::Echo(s) =>{
                 self.echo(s);
