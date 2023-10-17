@@ -7,7 +7,6 @@
 //
 // No hints this time!
 
-
 fn string_slice(arg: &str) {
     println!("{}", arg);
 }
@@ -19,11 +18,11 @@ fn main() {
     string_slice("blue");
     string("red".to_string());
     string(String::from("hi"));
-    string("rust is fun!".to_owned());    //将&str转变为string
+    string("rust is fun!".to_owned());
     string("nice weather".into());
     string(format!("Interpolation {}", "Station"));
     string_slice(&String::from("abc")[0..1]);
     string_slice("  hello there ".trim());
     string("Happy Monday!".to_string().replace("Mon", "Tues"));
-    string("mY sHiFt KeY iS sTiCkY".to_lowercase());  //返回此字符串切片的小写等效项，作为新的 String
+    string("mY sHiFt KeY iS sTiCkY".to_lowercase());
 }

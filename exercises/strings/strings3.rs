@@ -3,9 +3,7 @@
 // Execute `rustlings hint strings3` or use the `hint` watch subcommand for a
 // hint.
 
-
 fn trim_me(input: &str) -> String {
-    // TODO: Remove whitespace from both ends of a string!
     input.trim_start().trim_end().to_string()
 }
 
@@ -16,10 +14,11 @@ fn compose_me(input: &str) -> String {
     input
 }
 
+// Notice that, `replace` creates a new String, and copies the data from this String slice into it.
 fn replace_me(input: &str) -> String {
     // TODO: Replace "cars" in the string with "balloons"!
     let mut input = input.to_string();
-    input.replace("cars","balloons")
+    input.replace("cars", "balloons")
 }
 
 #[cfg(test)]
@@ -44,8 +43,4 @@ mod tests {
         assert_eq!(replace_me("I think cars are cool"), "I think balloons are cool");
         assert_eq!(replace_me("I love to look at cars"), "I love to look at balloons");
     }
-}
-
-fn main(){
-
 }
