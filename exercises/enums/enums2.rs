@@ -5,10 +5,6 @@
 
 #[derive(Debug)]
 enum Message {
-<<<<<<< HEAD
-    // TODO: define the different variants used below
-=======
->>>>>>> d1567fe030a6dac432df15cb675bbc7da1f3e5c3
     Move {
         x: i32,
         y: i32,
