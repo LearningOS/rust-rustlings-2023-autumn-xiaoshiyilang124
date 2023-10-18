@@ -11,12 +11,15 @@
 
 // I AM NOT DONE
 
-pub fn generate_nametag_text(name: String) -> Option<String> {
+//pub fn generate_nametag_text(name: String) -> Option<String> {
+    pub fn generate_nametag_text(name: String) -> Result<String, String> {
     if name.is_empty() {
         // Empty names aren't allowed.
-        None
+        //None
+        Err("`name` was empty; it must be nonempty.".into())
     } else {
-        Some(format!("Hi! My name is {}", name))
+        //Some(format!("Hi! My name is {}", name))
+        Ok(format!("Hi! My name is {}", name))
     }
 }
 
@@ -40,4 +43,8 @@ mod tests {
             Err("`name` was empty; it must be nonempty.".into())
         );
     }
+}
+
+fn main(){
+
 }
