@@ -50,7 +50,7 @@ mod tests {
         let sender_country = String::from("Spain");
         let recipient_country = String::from("Austria");
 
-        Package::new(sender_country, recipient_country, 5);
+        Package::new(sender_country, recipient_country, -1);
     }
 
     #[test]
@@ -88,5 +88,5 @@ mod tests {
 }
 
 fn main(){
-
+    
 }
